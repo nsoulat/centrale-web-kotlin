@@ -7,6 +7,8 @@ open class Person(private val firstName: String = "John", private val lastName: 
     override val id by lazy { newId() }
     override val createdAt : LocalDateTime = LocalDateTime.now()
 
+    var page = Page(mutableListOf())
+
     // var is not read-only
     private var nickName: String? = null
         set(value) {
