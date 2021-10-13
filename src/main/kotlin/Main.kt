@@ -2,12 +2,14 @@ fun main() {
     val person1 = Person("Jack", "Empereur", mutableListOf())
     val person2 = Person("Severin", "Demon", mutableListOf())
     val person3 = PersonPrivate("T'es","Blocké", mutableListOf(person1))
+    println("Jack et Severin s'ajoutent en amis")
     person1.addFriend(person2)
-    println("Personne 1: $person1")
-    println("Amis de Personne 1: ${person1.printFriends()}")
+    println("Voici Jack: $person1")
+    println("Et voici ses amis: ${person1.printFriends()}")
+    println("Ci-dessus sont les infos complètes de Severin")
     person2.printInfo()
-    println("Amis de Personne 2: ${person2.printFriends()}")
-    println("Amis de Personne 3: ${person3.printFriends()}")
+    println("Voici les amis de Severin: ${person2.printFriends()}")
+    println("Voici les amis d'une personne privée: ${person3.printFriends()}")
 
     val message = Message("cc !", person1, person2)
     println("message: $message")
@@ -18,8 +20,8 @@ fun main() {
 
     person1.page.addPost(post1)
     person2.page.addPost(post2)
-    println("--------Page de Personne 2----------\n ${person2.page} \n--------Fin-----------")
+    println("--------Page de Jack----------\n ${person2.page} \n------------FIN---------------")
 
     post1.modifyPost("J'ai adoré mes vacances et les patates")
-    println("--------Page de Personne 1----------\n ${person1.page} \n--------Fin-----------")
+    println("--------Page de Severin-------\n ${person1.page} \n------------FIN---------------")
 }
