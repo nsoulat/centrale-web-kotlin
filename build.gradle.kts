@@ -25,6 +25,8 @@ tasks.withType<KotlinCompile>() {
 }
 
 tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
     manifest {
         attributes["Main-Class"] = "MainKt"
     }
