@@ -24,8 +24,11 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("junit:junit:4.13.1")
+	implementation("org.junit.jupiter:junit-jupiter:5.7.0")
 	runtimeOnly("com.h2database:h2")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+//	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation(kotlin("test"))
 }
 
 tasks.withType<KotlinCompile> {
